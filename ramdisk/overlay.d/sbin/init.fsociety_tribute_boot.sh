@@ -24,7 +24,8 @@ echo 25000 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/down_rate_limit_u
 # Set zRAM config
 echo 1 > /sys/block/zram0/reset;
 echo "lz4" > /sys/block/zram0/comp_algorithm;
-echo 2684354560 > /sys/block/zram0/disksize;
+echo 2831155200 > /sys/block/zram0/disksize;
+echo 0 > /proc/sys/vm/page-cluster;
 mkswap /dev/block/zram0;
 swapon /dev/block/zram0 -p 32758;
 

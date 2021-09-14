@@ -13,7 +13,7 @@ swapoff /dev/block/zram0;
 # Set BBRv2 as the default TCP cong. algo.
 echo "bbr2" > /proc/sys/net/ipv4/tcp_congestion_control; # stock is westwood
 
-# Set custom read-ahead values (512: default 128 nr_requests value x 4)
+# Set custom read-ahead values (512: stock 128 nr_requests value x 4)
 echo 512 > /sys/block/sda/queue/read_ahead_kb;
 echo 512 > /sys/block/dm-8/queue/read_ahead_kb;
 

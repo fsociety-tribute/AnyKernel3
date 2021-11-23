@@ -10,6 +10,11 @@ sleep 30;
 # Disable zRAM
 swapoff /dev/block/zram0;
 
+# Set zen scheduler for the sda block
+echo "zen" > /sys/block/sda/queue/scheduler;
+echo 160 > /sys/block/sda/queue/nr_requests;
+echo 640 > /sys/block/sda/queue/read_ahead_kb;
+
 # Tune schedutil's down rate limit values for better battery life
 echo 25000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us; # stock is 20000
 echo 25000 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/down_rate_limit_us; # stock is 20000

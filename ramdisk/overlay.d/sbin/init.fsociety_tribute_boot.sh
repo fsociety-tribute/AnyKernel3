@@ -4,16 +4,11 @@
 # (c) 2020-2021 PK's Tuning Script for Pixel 4/XL by pkgnex
 # (c) 2021 fsociety tribute by momojuro
 
-# Wait to set the init values
-sleep 30;
+# Post-boot time script's execution delay
+sleep 90;
 
 # Set bbr as the default TCP cong. algo.
 echo "bbr" > /proc/sys/net/ipv4/tcp_congestion_control; # stock is cubic
-
-# Tune the sda block's I/O parameters
-echo "zen" > /sys/block/sda/queue/scheduler;
-echo 160 > /sys/block/sda/queue/nr_requests;
-echo 640 > /sys/block/sda/queue/read_ahead_kb; # 640 = 160 nr_requests custom value x 4
 
 # Tune schedutil's down rate limit values for better battery life
 echo 25000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us; # stock is 20000

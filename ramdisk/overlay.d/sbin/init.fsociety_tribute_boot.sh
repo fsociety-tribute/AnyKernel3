@@ -10,6 +10,9 @@ sleep 30;
 # Set bbr as the default TCP cong. algo.
 echo "bbr" > /proc/sys/net/ipv4/tcp_congestion_control; # stock is cubic
 
+# Set fiops as the default I/O scheduler for the sda block device (HLOS LUN)
+echo "fiops" > /sys/block/sda/queue/scheduler;
+
 # Tune schedutil's down rate limit values for better battery life
 echo 25000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us; # stock is 20000
 echo 25000 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/down_rate_limit_us; # stock is 20000

@@ -11,9 +11,9 @@ do.modules=0
 do.systemless=0
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=sunfish
-device.name2=Pixel 4a
-supported.versions=
+device.name1=redbull
+device.name2=
+supported.versions=12
 supported.patchlevels=
 '; } # end properties
 

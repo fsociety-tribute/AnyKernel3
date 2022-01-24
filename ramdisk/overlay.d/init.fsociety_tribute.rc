@@ -1,9 +1,0 @@
-# (c) 2018-2020 changes for blu_spark by eng.stk
-# (c) 2021 fsociety tribute by momojuro
-
-# Set init values
-on property:sys.boot_completed=1
-	setprop vendor.setup.power 1
-
-on property:vendor.setup.power=1
-	exec u:r:magisk:s0 root root -- ${MAGISKTMP}/init.fsociety_tribute_boot.sh

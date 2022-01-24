@@ -1,6 +1,5 @@
 # AnyKernel3 Ramdisk Mod Script
 # osm0sis @ xda-developers
-# blu_spark changes by eng.stk
 
 ## AnyKernel setup
 # begin properties
@@ -23,22 +22,12 @@ is_slot_device=1;
 ramdisk_compression=auto;
 patch_vbmeta_flag=auto;
 
-
 ## AnyKernel methods (DO NOT CHANGE)
 # import patching functions/variables - see for reference
 . tools/ak3-core.sh;
 
-
-## AnyKernel file attributes
-# set permissions/ownership for included ramdisk files
-set_perm_recursive 0 0 750 750 $ramdisk/*;
-
 ## AnyKernel install
-dump_boot;
+split_boot;
 
-# remove old root patch avoidance hack
-patch_cmdline "skip_override" "";
-
-write_boot;
+flash_boot;
 ## end install
-

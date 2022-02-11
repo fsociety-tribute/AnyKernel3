@@ -10,8 +10,8 @@ do.modules=0
 do.systemless=0
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=redbull
-device.name2=
+device.name1=barbet
+device.name2=Pixel 5a (5G)
 supported.versions=12
 supported.patchlevels=
 '; } # end properties

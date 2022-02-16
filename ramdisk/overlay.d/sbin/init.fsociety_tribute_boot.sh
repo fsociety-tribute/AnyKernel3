@@ -13,8 +13,9 @@ echo "bbr" > /proc/sys/net/ipv4/tcp_congestion_control; # stock is cubic
 swapoff /dev/block/zram0;
 echo 1 > /sys/block/zram0/reset;
 echo "lz4" > /sys/block/zram0/comp_algorithm;
-echo 2933049344 > /sys/block/zram0/disksize;
+echo 4399574016 > /sys/block/zram0/disksize;
 mkswap /dev/block/zram0;
 swapon /dev/block/zram0 -p 32758;
+echo 0 > /proc/sys/vm/page-cluster; # swap pages one at a time
 
 echo "fsociety tribute's tuning: completed." >> /dev/kmsg

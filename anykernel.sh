@@ -4,15 +4,14 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=fsociety tribute
+kernel.string=fsociety tribute by momojuro - Pixel 4a 5G & Pixel 5 a.k.a redbull
 do.devicecheck=1
 do.modules=0
 do.systemless=0
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=redbull
-device.name2=
-supported.versions=12
+supported.versions=12 - 13
 supported.patchlevels=
 '; } # end properties
 

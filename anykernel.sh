@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=fsociety tribute
+kernel.string=fsociety tribute by momojuro - Pixel 5a (5G) a.k.a barbet
 do.devicecheck=1
 do.modules=0
 do.systemless=0
@@ -12,7 +12,7 @@ do.cleanup=1
 do.cleanuponabort=0
 device.name1=barbet
 device.name2=Pixel 5a (5G)
-supported.versions=12
+supported.versions=12 - 13
 supported.patchlevels=
 '; } # end properties
 
